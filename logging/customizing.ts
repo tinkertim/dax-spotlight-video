@@ -5,8 +5,8 @@ $.logError("Normal Error.");
 
 // deno-lint-ignore no-explicit-any
 $.setErrorLogger((..._args: any[]) => {
-    console.info("Sorry, the error handler is on lunch break.");
-    return;
+  console.info("Sorry, the error handler is on lunch break.");
+  return;
 });
 
 $.logError("Error");

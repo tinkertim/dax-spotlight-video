@@ -7,4 +7,3 @@ const result = await $`grep localhost /etc/hosts`.lines();
 console.dir(result);
 
 $.log("Hello from Dax!");
-

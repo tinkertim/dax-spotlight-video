@@ -13,12 +13,12 @@ console.log(await $.commandExists("deno"));
 console.log($.commandExistsSync("deno"));
 
 await $.withRetries({
-    count: 2,
-    delay: "1s",
-    action: async () => {
-        await $.sleep("1s");
-    },
-    quiet: false
+  count: 2,
+  delay: "1s",
+  action: async () => {
+    await $.sleep("1s");
+  },
+  quiet: false,
 });
 
 $.stripAnsi("\u001B[4mHello World\u001B[0m");

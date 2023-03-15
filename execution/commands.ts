@@ -19,18 +19,16 @@ await $`echo foo-bar && echo bar-foo`;
 $.setPrintCommand(false);
 
 await Promise.all([
-    $`sleep 1 ; echo 1`,
-    $`sleep 2 ; echo 2`,
-    $`sleep 3 ; echo 3`,
+  $`sleep 1 ; echo 1`,
+  $`sleep 2 ; echo 2`,
+  $`sleep 3 ; echo 3`,
 ]);
 
 await $.withRetries({
-    count: 300,
-    delay: "2s",
-    action: async () => {
-        await $`true && false`;
-    },
-    quiet: false
+  count: 300,
+  delay: "2s",
+  action: async () => {
+    await $`true && false`;
+  },
+  quiet: false,
 });
-
-
